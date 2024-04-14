@@ -20,7 +20,7 @@ import "./App.css";
 
 // configure Web3Auth
 const clientId =
-  "BPi5PB_UiIZ-cPz1GtV5i1I2iOSOHuimiXBI0e-Oe_u6X3oVAbCiAZOTEBtTXw4tsluTITPqA8zMsfxIKMjiqNQ";
+  "BK2GYJCmhk8oOqyjBH6ZQvG7Wl0bW-DBkxmnKYsmoLu8Bm2tMTTMvgFQlcI_gw26MF6x2AlJvRbb0Us3kMjZ0Cc";
 
 const chainConfig = {
   chainNamespace: CHAIN_NAMESPACES.EIP155,
