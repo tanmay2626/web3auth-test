@@ -1,10 +1,10 @@
 import React from "react";
-import Social from "./Social";
+import Auth from "./Auth";
 
 const App = () => {
   return (
     <div>
-      <Social />
+      <Auth />
     </div>
   );
 };
