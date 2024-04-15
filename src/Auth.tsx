@@ -60,6 +60,8 @@ const web3auth = new Web3AuthNoModal({
 const openloginAdapter = new OpenloginAdapter({
   adapterSettings: {
     uxMode: "popup",
+    redirectUrl:
+      "https://661d32a54c544d00082b3e1f--super-kangaroo-3c3afa.netlify.app/",
   },
 });
 web3auth.configureAdapter(openloginAdapter);
