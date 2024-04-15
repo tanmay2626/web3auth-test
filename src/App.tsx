@@ -3,7 +3,7 @@ import Auth from "./Auth";
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Auth />
     </div>
   );

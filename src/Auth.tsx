@@ -5,6 +5,7 @@ import {
   IProvider,
   WALLET_ADAPTERS,
   WEB3AUTH_NETWORK,
+  UX_MODE,
 } from "@web3auth/base";
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
@@ -56,7 +57,11 @@ const web3auth = new Web3AuthNoModal({
 });
 
 // setup adapters
-const openloginAdapter = new OpenloginAdapter();
+const openloginAdapter = new OpenloginAdapter({
+  adapterSettings: {
+    uxMode: "popup",
+  },
+});
 web3auth.configureAdapter(openloginAdapter);
 
 const metamaskAdapter = new MetamaskAdapter({
