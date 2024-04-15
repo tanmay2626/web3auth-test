@@ -5,7 +5,7 @@ import Modal from "./Modal";
 const App = () => {
   return (
     <div className="App">
-      <Modal />
+      <Auth />
     </div>
   );
 };
