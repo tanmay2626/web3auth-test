@@ -11,7 +11,7 @@ import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 // IMP START - SDK Initialization
 // IMP START - Dashboard Registration
 const clientId =
-  "BPi5PB_UiIZ-cPz1GtV5i1I2iOSOHuimiXBI0e-Oe_u6X3oVAbCiAZOTEBtTXw4tsluTITPqA8zMsfxIKMjiqNQ"; // get from https://dashboard.web3auth.io
+  "BK2GYJCmhk8oOqyjBH6ZQvG7Wl0bW-DBkxmnKYsmoLu8Bm2tMTTMvgFQlcI_gw26MF6x2AlJvRbb0Us3kMjZ0Cc"; // get from https://dashboard.web3auth.io
 // IMP END - Dashboard Registration
 
 const chainConfig = {
