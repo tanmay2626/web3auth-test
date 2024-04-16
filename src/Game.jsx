@@ -90,7 +90,7 @@ export const Game = () => {
 
   return (
     <div>
-      <h1>Tap Game</h1>
+      <h1>Tap INit Game</h1>
       <button onClick={handleTap} disabled={energy <= 0}>
         Tap Me!
       </button>
