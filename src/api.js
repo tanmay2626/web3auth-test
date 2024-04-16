@@ -6,7 +6,7 @@ const accessToken =
 const authenticate = async (userData, referralCode) => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/login?referralCode=${referralCode}`,
+      `${process.env.REACT_APP_API}/login?referralCode=${referralCode}`,
       {
         publicAddress: "0xx",
         email: "tanmay@gmail.com",
@@ -26,14 +26,11 @@ const authenticate = async (userData, referralCode) => {
 
 const getProfile = async () => {
   try {
-    const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/profile`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
-    );
+    const response = await axios.get(`${process.env.REACT_APP_API}/profile`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
     return response.data;
   } catch (error) {
     console.log(`Error: ${error.message}`);
@@ -45,14 +42,11 @@ const getProfile = async () => {
 
 const logout = async (accessToken) => {
   try {
-    const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/profile`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
-    );
+    const response = await axios.post(`${process.env.REACT_APP_API}/profile`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
     return response.data;
   } catch (error) {
     console.log(`Error: ${error.message}`);
@@ -65,7 +59,7 @@ const logout = async (accessToken) => {
 // accessToken
 const getAllTasks = async () => {
   try {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/tasks`, {
+    const response = await axios.get(`${process.env.REACT_APP_API}/tasks`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
@@ -82,7 +76,7 @@ const getAllTasks = async () => {
 const getTaskById = async (taskId) => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/tasks/${taskId}`,
+      `${process.env.REACT_APP_API}/tasks/${taskId}`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -101,7 +95,7 @@ const getTaskById = async (taskId) => {
 const verifyTask = async (taskId, accessToken) => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/tasks/verify/:userId/:taskId`,
+      `${process.env.REACT_APP_API}/tasks/verify/:userId/:taskId`,
       {},
       {
         headers: {
@@ -121,7 +115,7 @@ const verifyTask = async (taskId, accessToken) => {
 const claimReward = async (taskId) => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/tasks/claim/${taskId}`,
+      `${process.env.REACT_APP_API}/tasks/claim/${taskId}`,
       {},
       {
         headers: {
@@ -141,7 +135,7 @@ const claimReward = async (taskId) => {
 const connectTwitter = async (twitterDetails, accessToken) => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/connect/twitter`,
+      `${process.env.REACT_APP_API}/connect/twitter`,
       {
         twitterId: 328739,
         titterUsername: "twaykar8",
@@ -164,7 +158,7 @@ const connectTwitter = async (twitterDetails, accessToken) => {
 const getLeaderboard = async (level) => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/leaderboard?level=${level}`,
+      `${process.env.REACT_APP_API}/leaderboard?level=${level}`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -182,14 +176,11 @@ const getLeaderboard = async (level) => {
 
 const getUserStats = async () => {
   try {
-    const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/userStats`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
-    );
+    const response = await axios.get(`${process.env.REACT_APP_API}/userStats`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
     return response.data;
   } catch (error) {
     console.log(`Error: ${error.message}`);
@@ -202,7 +193,7 @@ const getUserStats = async () => {
 const getAccountRaffleInfo = async () => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/raffleInfo`,
+      `${process.env.REACT_APP_API}/raffleInfo`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -221,14 +212,11 @@ const getAccountRaffleInfo = async () => {
 
 const getGameStats = async () => {
   try {
-    const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/gameStats`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
-    );
+    const response = await axios.get(`${process.env.REACT_APP_API}/gameStats`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
     return response.data;
   } catch (error) {
     console.log(`Error: ${error.message}`);
@@ -239,7 +227,7 @@ const getGameStats = async () => {
 const updateGameStats = async (gameData) => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/updategamestats`,
+      `${process.env.REACT_APP_API}/updategamestats`,
       gameData,
       {
         headers: {
@@ -257,7 +245,7 @@ const updateGameStats = async (gameData) => {
 const claimBooster = async () => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/claimbooster`,
+      `${process.env.REACT_APP_API}/claimbooster`,
       {
         price: 750,
         boosterType: "turbo",
