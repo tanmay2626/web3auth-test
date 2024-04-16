@@ -8,6 +8,7 @@ const App = () => {
     script.setAttribute("data-telegram-login", "mappatest_userBot");
     script.setAttribute("data-size", "large");
     script.setAttribute("data-radius", "5");
+    script.setAttribute("data-userpic", "false");
     script.setAttribute("data-auth-url", "https://t.me/mappatest_userBot/Test");
     script.setAttribute("data-request-access", "write");
 
