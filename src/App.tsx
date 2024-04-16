@@ -12,7 +12,7 @@ const App = () => {
     script.setAttribute("data-userpic", "false");
     script.setAttribute(
       "data-auth-url",
-      `https://t.me/mappatest_userBot/Test?startapp=${referralCode}`
+      `https://t.me/mappatest_userBot?start=${referralCode}`
     );
     script.setAttribute("data-request-access", "write");
 
