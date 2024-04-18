@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Web3AuthNoModal } from "@web3auth/no-modal";
 import {
   CHAIN_NAMESPACES,
@@ -160,6 +160,9 @@ const Auth = () => {
         <div>
           <button onClick={handleLogout} className="card">
             Logout
+          </button>
+          <button onClick={getAccounts} className="card">
+            Get Wallet Address
           </button>
           <p>{waddress ? waddress : ""}</p>
         </div>
