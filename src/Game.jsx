@@ -42,7 +42,7 @@ export const Game = () => {
   };
 
   const sendGameStats = async () => {
-    console.log("hello");
+    console.log(energy);
 
     const updatedGameStats = {
       coins: points,

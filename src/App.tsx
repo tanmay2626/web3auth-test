@@ -30,12 +30,13 @@
 // export default App;
 
 import React from "react";
-import { Game } from "./Game";
+
+import Auth from "./Auth";
 
 const App = () => {
   return (
     <div>
-      <Game />
+      <Auth />
     </div>
   );
 };
