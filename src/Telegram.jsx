@@ -10,7 +10,7 @@ const TelegramLogin = () => {
 
     // Define the onTelegramAuth function
     window.onTelegramAuth = (user) => {
-      alert(
+      console.log(
         "Logged in as " +
           user.first_name +
           " " +
