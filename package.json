@@ -21,6 +21,7 @@
     "@web3auth/wallet-connect-v2-adapter": "^8.1.0",
     "axios": "^1.6.8",
     "ethers": "^6.11.1",
+    "firebase": "^10.11.0",
     "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-dnd": "^16.0.1",
