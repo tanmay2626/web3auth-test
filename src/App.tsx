@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div>
       <p>Hello</p>
-      <p>{refer && refer}</p>
+      <p>{refer ? JSON.stringify(refer) : "NA"}</p>
     </div>
   );
 };
