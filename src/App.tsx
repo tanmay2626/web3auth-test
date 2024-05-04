@@ -19,7 +19,7 @@ const App = () => {
         if (tele) {
           await tele.ready();
           setUser(tele.initDataUnsafe.user);
-          setRefer(JSON.stringify(tele.initDataUnsafe.is_premium));
+          setRefer(tele.initDataUnsafe.is_premium);
         } else {
           console.error("Telegram WebApp API not available");
         }
